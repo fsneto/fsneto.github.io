@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="pt-br">
+<html xml:lang="pt-br">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Linux Game On</title>
+<!--Inserindo a formatação dos elementos em folhas de estilo em cascata CSS -->
+<style type="text/css">
+/* Formatando textos*/
+#titulo1{
+display:block;
+color:#FFF;
+text-align:center;
+font-family:"Arial Black", Gadget, sans-serif;
+font-size:65px;
+	}
+	
+	
+#titulo2{
+display:block;
+color:#840;
+text-align:center;
+font-family:Arial, Helvetica, sans-serif;
+font-size:45px;
+}
+
+#texto1 {
+	display:block;
+	color:#000;
+	text-align:left;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:18px;
+}
+
+/* elemento main em bloco vai ser o nosso site obs: #operador de id -- id="nome" -> #nome {funções} */
+#main { 
+width:1280px; 
+height:920px;
+display:block;
+float:left;
+background-color:#445;
+}
+
+#menubar {
+	width:1280px;
+	height:30px;
+	background-color:#445;
+	display:block;
+}
+
+a {
+	text-decoration:none;
+	color:#000;
+	
+}
+
+a:hober {
+	color:#000;
+}
+
+a:link{
+	color:#000
+	}
+	
+a:visited{
+	color:#000;
+}
+
+a:active{
+	color:#000
+}
+
+
+#mlabel {
+width:100px;
+height:30px;
+display:block;
+float:right;
+background-color:#FC0;
+border-left:1px;
+border-color:#000;
+text-align:center;
+
+}
+
+#mbutton {
+width:100px;
+height:30px;
+display:block;
+float:right;
+background-color:#DB0;
+border-left:1px solid;
+border-bottom:1px solid;
+border-color:#000;
+text-align:center;
+}
+/* colocando cor no button com o mouse*/
+#mbutton:hover {
+	background-color:#FC0;
+}
+#mtext {
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000;
+	font-size:24px;
+}
+#separador {
+	margin-top:-18px;
+	width:1280px;
+	height:30px;
+	background-color:#FC0;
+	display:block;
+}
+#conteudo{
+	display:block;
+	width:1272px;
+	height:750px;
+	border:4px solid #FC0;
+	background-color:#EDBD00;
+	margin-top:-18px;
+}
+</style>
+</head>
+
+<body bgcolor="#000000">
+	<div id="main"><div id="titulo1">Linux Game On</div><br />
+		<div id="menubar"><!-- foi criado id mtext pra configurar o texto do menu. tag h1/h2/h3 com problemas de alinhamento -->
+        	<a href="https://www.paypal.com/donate/?business=WLUV59XX5R4QE&amount=5&no_recurring=1&item_name=Colabore+com+Linux+Game+On&currency_code=BRL"><div id="mbutton"><div id="mtext">Colabore</div></div></a>
+            <a href="sobre.html"><div id="mbutton"><div id="mtext">Sobre</div></div></a>
+            <a href="lutris.html"><div id="mbutton"><div id="mtext">Lutris</div></div></a>
+            <a href="steam.html"><div id="mlabel"><div id="mtext">Steam</div></div></a>
+            <a href="ubuntu.html"><div id="mbutton"><div id="mtext">Ubuntu</div></div></a>
+            <a href="intro.html"><div id="mbutton"><div id="mtext">Intro</div></div></a>
+            <a href="index.html"><div id="mbutton"><div id="mtext">Home</div></div></a>
+		</div><br />
+        <div id="separador"></div><br />
+        <br />
+        <div id="conteudo" style="overflow:auto; margin-top:-40px;"><div id="titulo2" style="margin-right:100px;">Steam</div><br /><div id="imagens" style="display:block; float:left; height:600px;" align="left"><img src="Imagens_materias/snapstore-steam.png" align="left" hspace="10px" vspace="10px" style="width:600px; display:block; float:left; margin-left:25px;" /><img src="Imagens_materias/steamplay.png" align="left" hspace="10px" vspace="10px" style="width:600px; display:block; float:left; margin-left:25px;" /></div><div id="texto1" style="display:block; float:right; margin-right:20px; text-align:justify;width:600px; margin-top:-600px;">...Para começarmos a instalação da Steam Store para o linux pode ser feita de 2 maneiras recomendadas: 1 - via Snapstore(mais fácil) e 2 via Flatpak (requer o terminal e o flatpak instalados). A instalação pela snapstore é fácil é só abrir a loja de aplicativos snap do ubuntu e procurar por jogos ou steam direto que ele vai achar o programa e depois tu pode instalar qualquer uma das duas versões do aplicativo steam pois ele fará update via steam launcher. <br /><br />...A instalação via Flatpak é mais segura pois executa o programa da steam dentro de uma caixa dentro do linux (sandbox). Isso quer dizer que ele cria um ambiente separado pra ele onde sua instalação não interfere com outros programas e se você desinstalar um flatpak não irá estragar algum programa que possa estar usando alguma biblioteca compartilhada ou recurso. Abra o terminal para instalar via flatpak. Insira o comando <a style="color:#03F;">sudo add-apt-repository ppa:alexlarsson/flatpak</a> para criar um repositório para o flatpak. Em seguida <a style="color:#03F;">sudo apt-get update </a> para atualizar os repositórios no seu linux. Insira o comando <a style="color:#03F;">sudo apt-get install flatpak xdg-desktop-portal</a> para instalar o flatpak. Sabendo queo flatpak está instalado, seguimos com a instalação da Steam: <a style="color:#03F;">sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo</a> - para adicionar o repositorio flathub. Depois o comando <a style="color:#03F;">sudo flatpak install flathub com.valvesoftware.Steam</a> irá instalar a Steam via flathub no flatpak.<br /><br />...Após configurar sua conta da Steam e abrir o app da Steam você precisa entrar em configurações STEAMPLAY e habilitar a Steamplay pra todos os jogos de windows para poder jogar. Alguns jogos rodam mal, outros não rodam, mas tem muito jogo que roda bem graças ao Proton e ao Steam Deck que foi lançado para jogar os jogos do windows na steam e por isso ganhou verificação de compatibilidade dos jogos windows com a Steamplay. Para atualizar a lista de compatibilidade de jogos conforme vão atualizando o Steam Deck e a Steamplay, é necessario instalar os ultimos lançamentos do Proton GE pelo github, utilizando o aplicativo ProtonUP-QT.<br /><br />...Na página do github <a href="https://github.com/GloriousEggroll/proton-ge-custom" style="color:#03F;">https://github.com/GloriousEggroll/proton-ge-custom</a> baixe as últimas versões do ProtonGE na sua pasta de Downloads. Entre na pasta home no gerenciador de arquivos e aperte ctrl+h para mostrar as pastas ocultas. Procure pela pasta ~/.steam/root/compatibilitytools.d   lá você cria uma pasta chamada compatibility tools e copie e extraia a pasta do Proton GE baixado no downloads do github. Após vá para a página <a href="https://github.com/DavidoTek/ProtonUp-Qt" style="color:#03F;">https://github.com/DavidoTek/ProtonUp-Qt</a> e baixe o arquivo protonup-qt. Na pasta downloads tu precisa abrir o arquivo com o botão direito e configurar para executar esse arquivo como um programa. Esse aplicativo não precisa instalar só executar ele como programa e já funciona. Você precisa só procurar a pasta da steam nele e mandar instalar o ProtonGE pela pasta .steam/root/compatibility tools.<br /><br />Guarde o aplicativo Protonup-Qt para instalar atualizações no Lutris também e atualizar o wine e jogar jogar jogos na Epic Store e Gog atualizados. Para atualizar o Lutris é só copiar as pastas do wine e do Proton GE atualizadas e extraídas do site do github do Glorious Eggroll e salvar os arquivos em  <a style="color:#F00;">HOME/.local/share/lutris/wine/runners</a> e depois instalar com o Protonup-qt. Daí entra no Lutris e configure o wine.</div>
+        
+        
+        </div>
+	</div>
+</body>
+</html>
